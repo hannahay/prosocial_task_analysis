@@ -29,4 +29,3 @@ def get_experiment_config():
     
     return data_folder, mice, empathic_port, altruistic_mice, days, time_window, equal_trials, recipient_features, previous_choice
 
-# Call the configuration function

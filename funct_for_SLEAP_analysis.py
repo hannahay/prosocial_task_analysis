@@ -219,7 +219,6 @@ def interpolate_crop(data, LED_on, cut_indices, timeStamps):
     """
     data_trials = []
     for i in range(len(data)):
-        #data[i] = pd.Series(data[i]).interpolate(method='linear')
         data_trials_1, labels = crop_data_around_indices(data[i], LED_on, cut_indices,timeStamps)
         data_trials.append(data_trials_1)
     

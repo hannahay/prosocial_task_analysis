@@ -20,7 +20,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import f1_score
 
-# Import the custom module
+# Import the custom modules
 from prepare_behavioral_data_NEW import prepare_behavioral_data
 from get_experiment_config import get_experiment_config
 
