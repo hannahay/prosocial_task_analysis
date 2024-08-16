@@ -85,8 +85,6 @@ def prepare_behavioral_data(data_folder, mouse, day, empathic_port, window, equa
     timeStamps=pd.read_csv(filename_ts)
     print(timeStamps.columns)
     timeStamps=timeStamps.drop(columns=['Buffer Index'])
-    #timeStamps['Time Stamp (ms)']=timeStamps['Time Stamp (ms)']/1000 # convert to sec
-    #print(mat.keys())
 
     # Extract LED_on frames
     LED_on_R = mat['LED_on_frames_R']
@@ -128,7 +126,6 @@ def prepare_behavioral_data(data_folder, mouse, day, empathic_port, window, equa
     X[0] = dist_nose_to_food_act
     X[1] = dist_nose_to_food_recip
     X[2] = dist_nose_to_divider
-    #X[3] = velocity_actor[:,0]
     X[3] = np.cos(angle_nose_to_divider)
     X[4] = np.sin(angle_nose_to_divider)
     headers=["dist nose to foodport", "dist nose to recip foodport", "dist nose to divider", 
@@ -226,8 +223,6 @@ def prepare_behavioral_data(data_folder, mouse, day, empathic_port, window, equa
     headers.append("port_label")
     # Create DataFrame with headers
     df = pd.DataFrame(X_extended, columns=headers)
-
-    # Check the DataFrame created
     
 
     return df
